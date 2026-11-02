@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Model name="IKCAPE_Correlations" uri="http://example.org/dexpi/ThermoData/IKCAPE_Correlations">
+  <Import prefix="Core" source="https://data.dexpi.org/meta/2.0.0/Core" />
+  <Import prefix="Process" source="https://data.dexpi.org/meta/2.0.0/Process" />
+  <Import prefix="ThermoData" source="http://example.org/dexpi/ThermoData" />
+  <Object type="ThermoData/PureComponentTempDepCorrelation" id="POLY">
+    <Data property="Label">
+      <String>Generic polynomial equation</String>
+    </Data>
+    <Data property="Description">
+      <String>Generic polynomial equation</String>
+    </Data>
+    <Data property="Coefficients">
+      <String>A</String>
+      <String>B</String>
+      <String>C</String>
+      <String>E</String>
+      <String>F</String>
+      <String>G</String>
+      <String>H</String>
+      <String>I</String>
+      <String>J</String>
+      <String>K</String>
+    </Data>
+    <Data property="Expression">
+      <String>f(T) = A + B*T + C*T^2 + E*T^3 + F*T^4 + G*T^5 + H*T^6 + I*T^7 + J*T^8 + K*T^9</String>
+    </Data>
+    <Data property="SourceURI">
+      <String>https://dechema.de/dechema_media/Downloads/Informationssysteme/IK_CAPE_Equations-p-888.pdf</String>
+    </Data>
+  </Object>
+  <Object type="ThermoData/PureComponentTempDepCorrelation" id="EPOL">
+    <Data property="Label">
+      <String>Polynomial in exponent equation</String>
+    </Data>
+    <Data property="Description">
+      <String>Polynomial in Exponent Equation</String>
+    </Data>
+    <Data property="Coefficients">
+      <String>A</String>
+      <String>B</String>
+      <String>C</String>
+      <String>E</String>
+      <String>F</String>
+      <String>G</String>
+      <String>H</String>
+      <String>I</String>
+      <String>J</String>
+      <String>K</String>
+    </Data>
+    <Data property="Expression">
+      <String>log10(f(T)) = A + B*T + C*T^2 + E*T^3 + F*T^4 + G*T^5 + H*T^6 + I*T^7 + J*T^8 + K*T^9</String>
+    </Data>
+    <Data property="SourceURI">
+      <String>https://dechema.de/dechema_media/Downloads/Informationssysteme/IK_CAPE_Equations-p-888.pdf</String>
+    </Data>
+  </Object>
+  <Object type="ThermoData/PureComponentTempDepCorrelation" id="WATS">
+    <Data property="Label">
+      <String>Extended Watson equation</String>
+    </Data>
+    <Data property="Description">
+      <String>Extended Watson equation</String>
+    </Data>
+    <Data property="Coefficients">
+      <String>A</String>
+      <String>B</String>
+      <String>C</String>
+      <String>D</String>
+    </Data>
+    <Data property="Expression">
+      <String>f(T) = A * (C - T)^B + D</String>
+    </Data>
+    <Data property="SourceURI">
+      <String>https://dechema.de/dechema_media/Downloads/Informationssysteme/IK_CAPE_Equations-p-888.pdf</String>
+    </Data>
+  </Object>
+  <Object type="ThermoData/PureComponentTempDepCorrelation" id="ANTO">
+    <Data property="Label">
+      <String>Classic Antoine Equation</String>
+    </Data>
+    <Data property="Description">
+      <String>Classic Antoine equation for vapor pressure</String>
+    </Data>
+    <Data property="Coefficients">
+      <String>A</String>
+      <String>B</String>
+      <String>C</String>
+    </Data>
+    <Data property="Expression">
+      <String>log10(f(T)) = A - B/(C + T)</String>
+    </Data>
+    <Data property="SourceURI">
+      <String>https://dechema.de/dechema_media/Downloads/Informationssysteme/IK_CAPE_Equations-p-888.pdf</String>
+    </Data>
+  </Object>
+  <Object type="ThermoData/PureComponentTempDepCorrelation" id="ANT1">
+    <Data property="Label">
+      <String>Extended Antoine Equation</String>
+    </Data>
+    <Data property="Description">
+      <String>Extended Antoine equation for vapor pressure</String>
+    </Data>
+    <Data property="Coefficients">
+      <String>A</String>
+      <String>B</String>
+      <String>C</String>
+      <String>D</String>
+      <String>E</String>
+      <String>F</String>
+      <String>G</String>
+    </Data>
+    <Data property="Expression">
+      <String>ln(f(T)) = A + B/(T + C) + D*T + E*ln(T) + F*T^G</String>
+    </Data>
+    <Data property="SourceURI">
+      <String>https://dechema.de/dechema_media/Downloads/Informationssysteme/IK_CAPE_Equations-p-888.pdf</String>
+    </Data>
+  </Object>
+  <Object type="ThermoData/PureComponentTempDepCorrelation" id="KIRC">
+    <Data property="Label">
+      <String>Kirchhoff equation</String>
+    </Data>
+    <Data property="Description">
+      <String>Kirchhoff equation</String>
+    </Data>
+    <Data property="Coefficients">
+      <String>A</String>
+      <String>B</String>
+      <String>C</String>
+    </Data>
+    <Data property="Expression">
+      <String>ln(f(T)) = A - B/T + C*ln(T)</String>
+    </Data>
+    <Data property="SourceURI">
+      <String>https://dechema.de/dechema_media/Downloads/Informationssysteme/IK_CAPE_Equations-p-888.pdf</String>
+    </Data>
+  </Object>
+  <Object type="ThermoData/PureComponentTempDepCorrelation" id="SUTH">
+    <Data property="Label">
+      <String>Sutherland equation</String>
+    </Data>
+    <Data property="Description">
+      <String>Sutherland equation</String>
+    </Data>
+    <Data property="Coefficients">
+      <String>A</String>
+      <String>B</String>
+    </Data>
+    <Data property="Expression">
+      <String>f(T) = A*T^(1/2) / (1 + B/T)</String>
+    </Data>
+    <Data property="SourceURI">
+      <String>https://dechema.de/dechema_media/Downloads/Informationssysteme/IK_CAPE_Equations-p-888.pdf</String>
+    </Data>
+  </Object>
+  <Object type="ThermoData/PureComponentTempDepCorrelation" id="WAGN">
+    <Data property="Label">
+      <String>Wagner equation</String>
+    </Data>
+    <Data property="Description">
+      <String>Wagner equation</String>
+    </Data>
+    <Data property="Coefficients">
+      <String>A</String>
+      <String>B</String>
+      <String>C</String>
+      <String>D</String>
+      <String>E</String>
+      <String>F</String>
+    </Data>
+    <Data property="Expression">
+      <String>ln(f(T)) = ln(B) + 1/Tr*(C*tau + D*tau^(3/2) + E*tau^3 + F*tau^6), Tr=T/A, tau = 1 - Tr, A=TC, b=PC</String>
+    </Data>
+    <Data property="SourceURI">
+      <String>https://dechema.de/dechema_media/Downloads/Informationssysteme/IK_CAPE_Equations-p-888.pdf</String>
+    </Data>
+  </Object>
+  <Object type="ThermoData/PureComponentTempDepCorrelation" id="CPL">
+    <Data property="Label">
+      <String>Equation for the specific heat capacity of liquids</String>
+    </Data>
+    <Data property="Description">
+      <String>Equation for the specific heat capacity of liquids</String>
+    </Data>
+    <Data property="Coefficients">
+      <String>A</String>
+      <String>B</String>
+      <String>C</String>
+      <String>D</String>
+      <String>E</String>
+    </Data>
+    <Data property="Expression">
+      <String>f(T) = A + B*T + C*T^2 + D*T^3 + E/T^2</String>
+    </Data>
+    <Data property="SourceURI">
+      <String>https://dechema.de/dechema_media/Downloads/Informationssysteme/IK_CAPE_Equations-p-888.pdf</String>
+    </Data>
+  </Object>
+  <Object type="ThermoData/PureComponentTempDepCorrelation" id="ICPL">
+    <Data property="Label">
+      <String>Integrated Form of the equation for the specific heat capacity of liquids</String>
+    </Data>
+    <Data property="Description">
+      <String>Integrated Form of the equation for the specific heat capacity of liquids</String>
+    </Data>
+    <Data property="Coefficients">
+      <String>A</String>
+      <String>B</String>
+      <String>C</String>
+      <String>D</String>
+      <String>E</String>
+      <String>F</String>
+    </Data>
+    <Data property="Expression">
+      <String>f(T) = A + B*T + C*T^2 + D*T^3 + E*T^4 + F/T</String>
+    </Data>
+    <Data property="SourceURI">
+      <String>https://dechema.de/dechema_media/Downloads/Informationssysteme/IK_CAPE_Equations-p-888.pdf</String>
+    </Data>
+  </Object>
+  <Object type="ThermoData/PureComponentTempDepCorrelation" id="VISC">
+    <Data property="Label">
+      <String>Equation for the dynamic viscosity</String>
+    </Data>
+    <Data property="Description">
+      <String>Equation for the dynamic viscosity</String>
+    </Data>
+    <Data property="Coefficients">
+      <String>A</String>
+      <String>B</String>
+      <String>C</String>
+    </Data>
+    <Data property="Expression">
+      <String>f(T) = A*exp(B/T) + C</String>
+    </Data>
+    <Data property="SourceURI">
+      <String>https://dechema.de/dechema_media/Downloads/Informationssysteme/IK_CAPE_Equations-p-888.pdf</String>
+    </Data>
+  </Object>
+  <Object type="ThermoData/PureComponentTempDepCorrelation" id="RACK">
+    <Data property="Label">
+      <String>Rackett equation</String>
+    </Data>
+    <Data property="Description">
+      <String>Rackett equation</String>
+    </Data>
+    <Data property="Coefficients">
+      <String>A</String>
+      <String>B</String>
+      <String>C</String>
+      <String>D</String>
+    </Data>
+    <Data property="Expression">
+      <String>f(T) = A / ( B^(1+(1-T/C)^D) )</String>
+    </Data>
+    <Data property="SourceURI">
+      <String>https://dechema.de/dechema_media/Downloads/Informationssysteme/IK_CAPE_Equations-p-888.pdf</String>
+    </Data>
+  </Object>
+  <Object type="ThermoData/PureComponentTempDepCorrelation" id="KIR1">
+    <Data property="Label">
+      <String>Extended Kirchhoff equation</String>
+    </Data>
+    <Data property="Description">
+      <String>Extended Kirchhoff equation</String>
+    </Data>
+    <Data property="Coefficients">
+      <String>A</String>
+      <String>B</String>
+      <String>C</String>
+      <String>D</String>
+      <String>E</String>
+    </Data>
+    <Data property="Expression">
+      <String>ln(f(T)) = A + B/T + C*ln(T) + D*T^E</String>
+    </Data>
+    <Data property="SourceURI">
+      <String>https://dechema.de/dechema_media/Downloads/Informationssysteme/IK_CAPE_Equations-p-888.pdf</String>
+    </Data>
+  </Object>
+  <Object type="ThermoData/PureComponentTempDepCorrelation" id="ALYL">
+    <Data property="Label">
+      <String>Aly-Lee equation</String>
+    </Data>
+    <Data property="Description">
+      <String>Aly-Lee  equation</String>
+    </Data>
+    <Data property="Coefficients">
+      <String>A</String>
+      <String>B</String>
+      <String>C</String>
+      <String>D</String>
+      <String>E</String>
+    </Data>
+    <Data property="Expression">
+      <String>f(T) = A + B*(C/T / sinh(C/T))^2 + D*(E/T / cosh(E/T))^2</String>
+    </Data>
+    <Data property="SourceURI">
+      <String>https://dechema.de/dechema_media/Downloads/Informationssysteme/IK_CAPE_Equations-p-888.pdf</String>
+    </Data>
+  </Object>
+  <Object type="ThermoData/PureComponentTempDepCorrelation" id="DIP4">
+    <Data property="Label">
+      <String>DIPPR function for HVAP and ST</String>
+    </Data>
+    <Data property="Description">
+      <String>DIPPR function for HVAP and ST, equivalent to DIPPR106</String>
+    </Data>
+    <Data property="Coefficients">
+      <String>A</String>
+      <String>B</String>
+      <String>C</String>
+      <String>D</String>
+      <String>E</String>
+      <String>F</String>
+    </Data>
+    <Data property="Expression">
+      <String>f(T) = B*(1-Tr)^h, Tr = T/A, h = C + D*Tr + E*Tr^2 + F*Tr^3</String>
+    </Data>
+    <Data property="SourceURI">
+      <String>https://dechema.de/dechema_media/Downloads/Informationssysteme/IK_CAPE_Equations-p-888.pdf</String>
+    </Data>
+  </Object>
+  <Object type="ThermoData/PureComponentTempDepCorrelation" id="DIP5">
+    <Data property="Label">
+      <String>DIPPR function for KVAP and VISV</String>
+    </Data>
+    <Data property="Description">
+      <String>DIPPR function for KVAP and VISV, equivalent to DIPPR102</String>
+    </Data>
+    <Data property="Coefficients">
+      <String>A</String>
+      <String>B</String>
+      <String>C</String>
+      <String>D</String>
+    </Data>
+    <Data property="Expression">
+      <String>f(T) = A*T^B / (1 + C/T + D/T^2)</String>
+    </Data>
+    <Data property="SourceURI">
+      <String>https://dechema.de/dechema_media/Downloads/Informationssysteme/IK_CAPE_Equations-p-888.pdf</String>
+    </Data>
+  </Object>
+  <Object type="ThermoData/BinaryInteractionMethod" id="NRTL">
+    <Data property="Expression">
+      <String>G_ij = exp(-S_ij*tau_ij),   tau_ij = a_ij + b_ij/T + e_ij*ln(T) + f_ij*T,   S_ij = c_ij + d_ij*(T-273.15)</String>
+    </Data>
+    <Data property="Coefficients">
+      <String>a_ij</String>
+      <String>a_ji</String>
+      <String>b_ij</String>
+      <String>b_ji</String>
+      <String>c_ij</String>
+      <String>c_ji</String>
+      <String>d_ij</String>
+      <String>d_ji</String>
+      <String>e_ij</String>
+      <String>e_ji</String>
+      <String>f_ij</String>
+      <String>f_ji</String>
+    </Data>
+    <Data property="SourceURI">
+      <String>https://dechema.de/dechema_media/Downloads/Informationssysteme/IK_CAPE_Equations-p-888.pdf</String>
+    </Data>
+  </Object>
+</Model>

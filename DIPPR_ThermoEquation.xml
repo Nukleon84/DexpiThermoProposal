@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Model name="DIPPR_Correlations" uri="http://example.org/dexpi/ThermoData/DIPPR_Correlations">
+  <Import prefix="Core" source="https://data.dexpi.org/meta/2.0.0/Core" />
+  <Import prefix="Process" source="https://data.dexpi.org/meta/2.0.0/Process" />
+  <Import prefix="ThermoData" source="http://example.org/dexpi/ThermoData" />
+  <Object type="ThermoData/PureComponentTempDepCorrelation" id="DIPPR_EQ100">
+    <Data property="Label">
+      <String>DIPPR Equation 100</String>
+    </Data>
+    <Data property="Description">
+      <String>Polynomial temperature dependence commonly used for molar heat capacities, liquid thermal conductivity, and solid density.</String>
+    </Data>
+    <Data property="Coefficients">
+      <String>A</String>
+      <String>B</String>
+      <String>C</String>
+      <String>D</String>
+      <String>E</String>
+      <String>F</String>
+      <String>G</String>
+    </Data>
+    <Data property="Expression">
+      <String>Y = A + B*T + C*T^2 + D*T^3 + E*T^4 + F*T^5 + G*T^6</String>
+    </Data>
+    <Data property="SourceURI">
+      <String>https://de.wikipedia.org/wiki/DIPPR-Gleichungen</String>
+    </Data>
+  </Object>
+  <Object type="ThermoData/PureComponentTempDepCorrelation" id="DIPPR_EQ101">
+    <Data property="Label">
+      <String>DIPPR Equation 101</String>
+    </Data>
+    <Data property="Description">
+      <String>Exponential form used for vapor pressure, sublimation pressure, and liquid viscosity.</String>
+    </Data>
+    <Data property="Coefficients">
+      <String>A</String>
+      <String>B</String>
+      <String>C</String>
+      <String>D</String>
+      <String>E</String>
+    </Data>
+    <Data property="Expression">
+      <String>Y = exp(A + B/T + C*ln(T) + D*T^E)</String>
+    </Data>
+    <Data property="SourceURI">
+      <String>https://de.wikipedia.org/wiki/DIPPR-Gleichungen</String>
+    </Data>
+  </Object>
+  <Object type="ThermoData/PureComponentTempDepCorrelation" id="DIPPR_EQ102">
+    <Data property="Label">
+      <String>DIPPR Equation 102</String>
+    </Data>
+    <Data property="Description">
+      <String>Used for vapor viscosity and vapor thermal conductivity.</String>
+    </Data>
+    <Data property="Coefficients">
+      <String>A</String>
+      <String>B</String>
+      <String>C</String>
+      <String>D</String>
+    </Data>
+    <Data property="Expression">
+      <String>Y = A*T^B / (1 + C/T + D/T^2)</String>
+    </Data>
+    <Data property="SourceURI">
+      <String>https://de.wikipedia.org/wiki/DIPPR-Gleichungen</String>
+    </Data>
+  </Object>
+  <Object type="ThermoData/PureComponentTempDepCorrelation" id="DIPPR_EQ104">
+    <Data property="Label">
+      <String>DIPPR Equation 104</String>
+    </Data>
+    <Data property="Description">
+      <String>Reciprocal-power form often used for second virial coefficients and related properties.</String>
+    </Data>
+    <Data property="Coefficients">
+      <String>A</String>
+      <String>B</String>
+      <String>C</String>
+      <String>D</String>
+      <String>E</String>
+    </Data>
+    <Data property="Expression">
+      <String>Y = A + B/T + C/T^3 + D/T^8 + E/T^9</String>
+    </Data>
+    <Data property="SourceURI">
+      <String>https://de.wikipedia.org/wiki/DIPPR-Gleichungen</String>
+    </Data>
+  </Object>
+  <Object type="ThermoData/PureComponentTempDepCorrelation" id="DIPPR_EQ105">
+    <Data property="Label">
+      <String>DIPPR Equation 105</String>
+    </Data>
+    <Data property="Description">
+      <String>Rackett-type form often used for liquid molar density.</String>
+    </Data>
+    <Data property="Coefficients">
+      <String>A</String>
+      <String>B</String>
+      <String>C</String>
+      <String>D</String>
+    </Data>
+    <Data property="Expression">
+      <String>Y = A / B^(1 + (1 - T/C)^D)</String>
+    </Data>
+    <Data property="SourceURI">
+      <String>https://de.wikipedia.org/wiki/DIPPR-Gleichungen</String>
+    </Data>
+  </Object>
+  <Object type="ThermoData/PureComponentTempDepCorrelation" id="DIPPR_EQ106">
+    <Data property="Label">
+      <String>DIPPR Equation 106</String>
+    </Data>
+    <Data property="Description">
+      <String>Used for liquid surface tension and heat of vaporization.</String>
+    </Data>
+    <Data property="Coefficients">
+      <String>A</String>
+      <String>B</String>
+      <String>C</String>
+      <String>D</String>
+      <String>E</String>
+      <String>Tc</String>
+    </Data>
+    <Data property="Expression">
+      <String>Y = A*(1 - T/Tc)^(B + C*(T/Tc) + D*(T/Tc)^2 + E*(T/Tc)^3)</String>
+    </Data>
+    <Data property="SourceURI">
+      <String>https://de.wikipedia.org/wiki/DIPPR-Gleichungen</String>
+    </Data>
+  </Object>
+  <Object type="ThermoData/PureComponentTempDepCorrelation" id="DIPPR_EQ107">
+    <Data property="Label">
+      <String>DIPPR Equation 107</String>
+    </Data>
+    <Data property="Description">
+      <String>Aly-Lee form used for ideal-gas heat capacity.</String>
+    </Data>
+    <Data property="Coefficients">
+      <String>A</String>
+      <String>B</String>
+      <String>C</String>
+      <String>D</String>
+      <String>E</String>
+    </Data>
+    <Data property="Expression">
+      <String>Y = A + B*((C/T)/sinh(C/T))^2 + D*((E/T)/cosh(E/T))^2</String>
+    </Data>
+    <Data property="SourceURI">
+      <String>https://de.wikipedia.org/wiki/DIPPR-Gleichungen</String>
+    </Data>
+  </Object>
+  <Object type="ThermoData/PureComponentTempDepCorrelation" id="DIPPR_EQ114">
+    <Data property="Label">
+      <String>DIPPR Equation 114</String>
+    </Data>
+    <Data property="Description">
+      <String>Alternate liquid heat capacity expression using critical temperature.</String>
+    </Data>
+    <Data property="Coefficients">
+      <String>A</String>
+      <String>B</String>
+      <String>C</String>
+      <String>D</String>
+      <String>Tc</String>
+    </Data>
+    <Data property="Expression">
+      <String>Y = A^2/tau + B - 2*A*C*tau - A*D*tau^2 - (1/3)*C^2*tau^3 - (1/2)*C*D*tau^4 - (1/5)*D^2*tau^5, tau = 1 - T/Tc</String>
+    </Data>
+    <Data property="SourceURI">
+      <String>https://de.wikipedia.org/wiki/DIPPR-Gleichungen</String>
+    </Data>
+  </Object>
+  <Object type="ThermoData/PureComponentTempDepCorrelation" id="DIPPR_EQ115">
+    <Data property="Label">
+      <String>DIPPR Equation 115</String>
+    </Data>
+    <Data property="Description">
+      <String>Alternate vapor pressure / liquid viscosity form.</String>
+    </Data>
+    <Data property="Coefficients">
+      <String>A</String>
+      <String>B</String>
+      <String>C</String>
+      <String>D</String>
+      <String>E</String>
+    </Data>
+    <Data property="Expression">
+      <String>Y = exp(A + B/T + C*ln(T) + D*T^2 + E/T^2)</String>
+    </Data>
+    <Data property="SourceURI">
+      <String>https://de.wikipedia.org/wiki/DIPPR-Gleichungen</String>
+    </Data>
+  </Object>
+  <Object type="ThermoData/PureComponentTempDepCorrelation" id="DIPPR_EQ116">
+    <Data property="Label">
+      <String>DIPPR Equation 116</String>
+    </Data>
+    <Data property="Description">
+      <String>Molar density of water and related critical-region expressions.</String>
+    </Data>
+    <Data property="Coefficients">
+      <String>A</String>
+      <String>B</String>
+      <String>C</String>
+      <String>D</String>
+      <String>E</String>
+      <String>Tc</String>
+    </Data>
+    <Data property="Expression">
+      <String>Y = A + B*tau^0.35 + C*tau^(2/3) + D*tau + E*tau^(4/3), tau = 1 - T/Tc</String>
+    </Data>
+    <Data property="SourceURI">
+      <String>https://de.wikipedia.org/wiki/DIPPR-Gleichungen</String>
+    </Data>
+  </Object>
+  <Object type="ThermoData/PureComponentTempDepCorrelation" id="DIPPR_EQ127">
+    <Data property="Label">
+      <String>DIPPR Equation 127</String>
+    </Data>
+    <Data property="Description">
+      <String>Rare ideal-gas heat-capacity form using three Debye-like exponential terms.</String>
+    </Data>
+    <Data property="Coefficients">
+      <String>A</String>
+      <String>B</String>
+      <String>C</String>
+      <String>D</String>
+      <String>E</String>
+      <String>F</String>
+      <String>G</String>
+    </Data>
+    <Data property="Expression">
+      <String>Y = A + B*((C/T)^2*exp(C/T)/(exp(C/T)-1)^2) + D*((E/T)^2*exp(E/T)/(exp(E/T)-1)^2) + F*((G/T)^2*exp(G/T)/(exp(G/T)-1)^2)</String>
+    </Data>
+    <Data property="SourceURI">
+      <String>https://de.wikipedia.org/wiki/DIPPR-Gleichungen</String>
+    </Data>
+  </Object>
+  <Object type="ThermoData/PureComponentTempDepCorrelation" id="DIPPR_EQ100_RECIPROCAL">
+    <Data property="Label">
+      <String>DIPPR Equation 100 reciprocal</String>
+    </Data>
+    <Data property="Description">
+      <String>Reciprocal variant of DIPPR equation 100.</String>
+    </Data>
+    <Data property="Coefficients">
+      <String>A</String>
+      <String>B</String>
+      <String>C</String>
+      <String>D</String>
+      <String>E</String>
+      <String>F</String>
+      <String>G</String>
+    </Data>
+    <Data property="Expression">
+      <String>Y = 1 / (A + B*T + C*T^2 + D*T^3 + E*T^4 + F*T^5 + G*T^6)</String>
+    </Data>
+    <Data property="SourceURI">
+      <String>https://de.wikipedia.org/wiki/DIPPR-Gleichungen</String>
+    </Data>
+  </Object>
+  <Object type="ThermoData/PureComponentTempDepCorrelation" id="DIPPR_EQ105_RECIPROCAL">
+    <Data property="Label">
+      <String>DIPPR Equation 105 reciprocal</String>
+    </Data>
+    <Data property="Description">
+      <String>Reciprocal variant used for molar volume.</String>
+    </Data>
+    <Data property="Coefficients">
+      <String>A</String>
+      <String>B</String>
+      <String>C</String>
+      <String>D</String>
+    </Data>
+    <Data property="Expression">
+      <String>Y = B^(1 + (1 - T/C)^D) / A</String>
+    </Data>
+    <Data property="SourceURI">
+      <String>https://de.wikipedia.org/wiki/DIPPR-Gleichungen</String>
+    </Data>
+  </Object>
+  <Object type="ThermoData/PureComponentTempDepCorrelation" id="DIPPR_EQ106_RECIPROCAL">
+    <Data property="Label">
+      <String>DIPPR Equation 106 reciprocal</String>
+    </Data>
+    <Data property="Description">
+      <String>Reciprocal variant of the surface-tension form.</String>
+    </Data>
+    <Data property="Coefficients">
+      <String>A</String>
+      <String>B</String>
+      <String>C</String>
+      <String>D</String>
+      <String>E</String>
+      <String>Tc</String>
+    </Data>
+    <Data property="Expression">
+      <String>Y = 1 / (A*(1 - T/Tc)^(B + C*(T/Tc) + D*(T/Tc)^2 + E*(T/Tc)^3))</String>
+    </Data>
+    <Data property="SourceURI">
+      <String>https://de.wikipedia.org/wiki/DIPPR-Gleichungen</String>
+    </Data>
+  </Object>
+</Model>

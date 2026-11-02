@@ -1,0 +1,1789 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Model name="ExampleThermoDatabase" uri="http://example.org/dexpi/ExampleThermoDatabase">
+  <Import prefix="Core" source="https://data.dexpi.org/meta/2.0.0/Core" />
+  <Import prefix="Process" source="https://data.dexpi.org/meta/2.0.0/Process" />
+  <Import prefix="ThermoData" source="http://example.org/dexpi/ThermoData" />
+  <Import prefix="IKCAPE" source="http://example.org/dexpi/IKCAPE_Correlations" />
+  <Object type="ThermoData/DataSource" id="ChemSep_Datasource">
+    <Data property="Description">
+      <String>Excerpt from ChemSep Lite Thermodynamic Database, pure component coefficients reproduced under Artistic License 2.0, binary interaction parameters for NRTL method reproduced without license for illustrative purposes only</String>
+    </Data>
+    <Data property="Authors">
+      <String>Harry Kooijman</String>
+      <String>Ross Taylor</String>
+    </Data>
+    <Data property="SourceURI">
+      <String>https://www.chemsep.com/</String>
+    </Data>
+    <Data property="License">
+      <String>https://opensource.org/license/Artistic-2.0</String>
+    </Data>
+  </Object>
+  <Object type="Process/PureMaterialComponent" id="Water">
+    <Data property="Label">
+      <String>Water</String>
+    </Data>
+    <Data property="CasNumber">
+      <String>7732-18-5</String>
+    </Data>
+  </Object>
+  <Object type="Process/PureMaterialComponent" id="Methanol">
+    <Data property="Label">
+      <String>Methanol</String>
+    </Data>
+    <Data property="CasNumber">
+      <String>67-56-1</String>
+    </Data>
+  </Object>
+  <Object type="Process/PureMaterialComponent" id="Acetone">
+    <Data property="Label">
+      <String>Acetone</String>
+    </Data>
+    <Data property="CasNumber">
+      <String>67-64-1</String>
+    </Data>
+  </Object>
+  <Object type="ThermoData/PureComponentConstant" id="Water_MolarWeight">
+    <Data property="Property">
+      <DataReference data="ThermoData/ConstantProperties.MolarWeight" />
+    </Data>
+    <Data property="UnitOfMeasure">
+      <DataReference data="Thermo/MolarWeightUnit.KilogramPerKmol" />
+    </Data>
+    <Data property="Value">
+      <Double>18.01528</Double>
+    </Data>
+    <References property="Component" objects="#Water" />
+    <References property="DataSource" objects="#ChemSep_DataSource" />
+  </Object>
+  <Object type="ThermoData/PureComponentConstant" id="Water_CriticalTemperature">
+    <Data property="Property">
+      <DataReference data="ThermoData/ConstantProperties.CriticalTemperature" />
+    </Data>
+    <Data property="UnitOfMeasure">
+      <DataReference data="Core/PhysicalQuantities.TemperatureUnit.Kelvin" />
+    </Data>
+    <Data property="Value">
+      <Double>647.14</Double>
+    </Data>
+    <References property="Component" objects="#Water" />
+    <References property="DataSource" objects="#ChemSep_DataSource" />
+  </Object>
+  <Object type="ThermoData/PureComponentConstant" id="Water_CriticalPressure">
+    <Data property="Property">
+      <DataReference data="ThermoData/ConstantProperties.CriticalPressure" />
+    </Data>
+    <Data property="UnitOfMeasure">
+      <DataReference data="Core/PhysicalQuantities.PressureUnit.Pascal" />
+    </Data>
+    <Data property="Value">
+      <Double>22064000</Double>
+    </Data>
+    <References property="Component" objects="#Water" />
+    <References property="DataSource" objects="#ChemSep_DataSource" />
+  </Object>
+  <Object type="ThermoData/PureComponentConstant" id="Water_AcentricFactor">
+    <Data property="Property">
+      <DataReference data="ThermoData/ConstantProperties.AcentricFactor" />
+    </Data>
+    <Data property="Value">
+      <Double>0.344</Double>
+    </Data>
+    <References property="Component" objects="#Water" />
+    <References property="DataSource" objects="#ChemSep_DataSource" />
+  </Object>
+  <Object type="ThermoData/PureComponentConstant" id="Methanol_MolarWeight">
+    <Data property="Property">
+      <DataReference data="ThermoData/ConstantProperties.MolarWeight" />
+    </Data>
+    <Data property="UnitOfMeasure">
+      <DataReference data="Thermo/MolarWeightUnit.KilogramPerKmol" />
+    </Data>
+    <Data property="Value">
+      <Double>32.04186</Double>
+    </Data>
+    <References property="Component" objects="#Methanol" />
+    <References property="DataSource" objects="#ChemSep_DataSource" />
+  </Object>
+  <Object type="ThermoData/PureComponentConstant" id="Methanol_CriticalTemperature">
+    <Data property="Property">
+      <DataReference data="ThermoData/ConstantProperties.CriticalTemperature" />
+    </Data>
+    <Data property="UnitOfMeasure">
+      <DataReference data="Core/PhysicalQuantities.TemperatureUnit.Kelvin" />
+    </Data>
+    <Data property="Value">
+      <Double>512.64</Double>
+    </Data>
+    <References property="Component" objects="#Methanol" />
+    <References property="DataSource" objects="#ChemSep_DataSource" />
+  </Object>
+  <Object type="ThermoData/PureComponentConstant" id="Methanol_CriticalPressure">
+    <Data property="Property">
+      <DataReference data="ThermoData/ConstantProperties.CriticalPressure" />
+    </Data>
+    <Data property="UnitOfMeasure">
+      <DataReference data="Core/PhysicalQuantities.PressureUnit.Pascal" />
+    </Data>
+    <Data property="Value">
+      <Double>8097000</Double>
+    </Data>
+    <References property="Component" objects="#Methanol" />
+    <References property="DataSource" objects="#ChemSep_DataSource" />
+  </Object>
+  <Object type="ThermoData/PureComponentConstant" id="Methanol_AcentricFactor">
+    <Data property="Property">
+      <DataReference data="ThermoData/ConstantProperties.AcentricFactor" />
+    </Data>
+    <Data property="Value">
+      <Double>0.565</Double>
+    </Data>
+    <References property="Component" objects="#Methanol" />
+    <References property="DataSource" objects="#ChemSep_DataSource" />
+  </Object>
+  <Object type="ThermoData/PureComponentConstant" id="Acetone_MolarWeight">
+    <Data property="Property">
+      <DataReference data="ThermoData/ConstantProperties.MolarWeight" />
+    </Data>
+    <Data property="UnitOfMeasure">
+      <DataReference data="Thermo/MolarWeightUnit.KilogramPerKmol" />
+    </Data>
+    <Data property="Value">
+      <Double>58.07914</Double>
+    </Data>
+    <References property="Component" objects="#Acetone" />
+    <References property="DataSource" objects="#ChemSep_DataSource" />
+  </Object>
+  <Object type="ThermoData/PureComponentConstant" id="Acetone_CriticalTemperature">
+    <Data property="Property">
+      <DataReference data="ThermoData/ConstantProperties.CriticalTemperature" />
+    </Data>
+    <Data property="UnitOfMeasure">
+      <DataReference data="Core/PhysicalQuantities.TemperatureUnit.Kelvin" />
+    </Data>
+    <Data property="Value">
+      <Double>508.1</Double>
+    </Data>
+    <References property="Component" objects="#Acetone" />
+    <References property="DataSource" objects="#ChemSep_DataSource" />
+  </Object>
+  <Object type="ThermoData/PureComponentConstant" id="Acetone_CriticalPressure">
+    <Data property="Property">
+      <DataReference data="ThermoData/ConstantProperties.CriticalPressure" />
+    </Data>
+    <Data property="UnitOfMeasure">
+      <DataReference data="Core/PhysicalQuantities.PressureUnit.Pascal" />
+    </Data>
+    <Data property="Value">
+      <Double>4700000</Double>
+    </Data>
+    <References property="Component" objects="#Acetone" />
+    <References property="DataSource" objects="#ChemSep_DataSource" />
+  </Object>
+  <Object type="ThermoData/PureComponentConstant" id="Acetone_AcentricFactor">
+    <Data property="Property">
+      <DataReference data="ThermoData/ConstantProperties.AcentricFactor" />
+    </Data>
+    <Data property="Value">
+      <Double>0.307</Double>
+    </Data>
+    <References property="Component" objects="#Acetone" />
+    <References property="DataSource" objects="#ChemSep_DataSource" />
+  </Object>
+  <Object type="ThermoData/PureComponentTemperatureDependentPropertyFunction" id="Water_VaporPressure">
+    <Data property="EvaluatedProperty">
+      <DataReference data="ThermoData/EvaluatedProperties.VaporPressure" />
+    </Data>
+    <Data property="UnitOfMeasure">
+      <DataReference data="Core/PhysicalQuantities.PressureUnit.Pascal" />
+    </Data>
+    <Data property="Coefficients">
+      <Double>74.55502</Double>
+      <Double>-7295.586</Double>
+      <Double>-7.442448</Double>
+      <Double>4.2881E-06</Double>
+      <Double>2</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+    </Data>
+    <Components property="MinimumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>-10</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <Components property="MaximumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>374.14</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <References property="Component" objects="#Water" />
+    <References property="Formula" objects="#IKCAPE/KIR1" />
+    <References property="DataSource" objects="#ChemSep_DataSource" />
+  </Object>
+  <Object type="ThermoData/PureComponentTemperatureDependentPropertyFunction" id="Water_HeatOfVaporization">
+    <Data property="EvaluatedProperty">
+      <DataReference data="ThermoData/EvaluatedProperties.HeatOfVaporization" />
+    </Data>
+    <Data property="UnitOfMeasure">
+      <DataReference data="Core/PhysicalQuantities.MoleSpecificEnergyUnit.JoulePerKilomole" />
+    </Data>
+    <Data property="Coefficients">
+      <Double>647.14</Double>
+      <Double>59640000</Double>
+      <Double>0.86515</Double>
+      <Double>-1.1134</Double>
+      <Double>0.67764</Double>
+      <Double>-0.026925</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+    </Data>
+    <Components property="MinimumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>0</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <Components property="MaximumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>374.13</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <References property="Component" objects="#Water" />
+    <References property="Formula" objects="#IKCAPE/DIP4" />
+    <References property="DataSource" objects="#ChemSep_DataSource" />
+  </Object>
+  <Object type="ThermoData/PureComponentTemperatureDependentPropertyFunction" id="Water_LiquidDensity">
+    <Data property="EvaluatedProperty">
+      <DataReference data="ThermoData/EvaluatedProperties.LiquidDensity" />
+    </Data>
+    <Data property="UnitOfMeasure">
+      <DataReference data="Core/PhysicalQuantities.MolePerLitre" />
+    </Data>
+    <Data property="Coefficients">
+      <Double>647.14</Double>
+      <Double>32.51621</Double>
+      <Double>-3.213004</Double>
+      <Double>7.92411</Double>
+      <Double>-7.359898</Double>
+      <Double>2.703522</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+    </Data>
+    <Components property="MinimumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>-20.049999999999983</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <Components property="MaximumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>374.14</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <References property="Component" objects="#Water" />
+    <References property="Formula" objects="#IKCAPE/DIP4" />
+    <References property="DataSource" objects="#ChemSep_DataSource" />
+  </Object>
+  <Object type="ThermoData/PureComponentTemperatureDependentPropertyFunction" id="Water_LiquidHeatCapacity">
+    <Data property="EvaluatedProperty">
+      <DataReference data="ThermoData/EvaluatedProperties.LiquidHeatCapacity" />
+    </Data>
+    <Data property="UnitOfMeasure">
+      <DataReference data="Core/PhysicalQuantities.SpecificHeatCapacityUnit.JoulePerKilomoleKelvin" />
+    </Data>
+    <Data property="Coefficients">
+      <Double>35.4126613</Double>
+      <Double>0.374517597</Double>
+      <Double>-0.00117325741</Double>
+      <Double>1.23601408E-06</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+    </Data>
+    <Components property="MinimumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>-0.049999999999954525</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <Components property="MaximumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>260</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <References property="Component" objects="#Water" />
+    <References property="Formula" objects="#IKCAPE/POLY" />
+    <References property="DataSource" objects="#ChemSep_DataSource" />
+  </Object>
+  <Object type="ThermoData/PureComponentTemperatureDependentPropertyFunction" id="Water_LiquidViscosity">
+    <Data property="EvaluatedProperty">
+      <DataReference data="ThermoData/EvaluatedProperties.LiquidViscosity" />
+    </Data>
+    <Data property="UnitOfMeasure">
+      <DataReference data="Core/PhysicalQuantities.DynamicViscosityUnit.PascalSecond" />
+    </Data>
+    <Data property="Coefficients">
+      <Double>-133.7</Double>
+      <Double>6785.7</Double>
+      <Double>18.47</Double>
+      <Double>-1.4736E-05</Double>
+      <Double>2</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+    </Data>
+    <Components property="MinimumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>-0.049999999999954525</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <Components property="MaximumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>373.98</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <References property="Component" objects="#Water" />
+    <References property="Formula" objects="#IKCAPE/KIR1" />
+    <References property="DataSource" objects="#ChemSep_DataSource" />
+  </Object>
+  <Object type="ThermoData/PureComponentTemperatureDependentPropertyFunction" id="Water_LiquidHeatConductivity">
+    <Data property="EvaluatedProperty">
+      <DataReference data="ThermoData/EvaluatedProperties.LiquidHeatConductivity" />
+    </Data>
+    <Data property="UnitOfMeasure">
+      <DataReference data="Core/PhysicalQuantities.ThermalConductivityUnit.WattPerMeterKelvin" />
+    </Data>
+    <Data property="Coefficients">
+      <Double>-0.610812352</Double>
+      <Double>0.00710980082</Double>
+      <Double>-1.1437165E-05</Double>
+      <Double>4.45020927E-09</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+    </Data>
+    <Components property="MinimumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>-0.049999999999954525</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <Components property="MaximumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>360</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <References property="Component" objects="#Water" />
+    <References property="Formula" objects="#IKCAPE/POLY" />
+    <References property="DataSource" objects="#ChemSep_DataSource" />
+  </Object>
+  <Object type="ThermoData/PureComponentTemperatureDependentPropertyFunction" id="Water_IdealGasHeatCapacity">
+    <Data property="EvaluatedProperty">
+      <DataReference data="ThermoData/EvaluatedProperties.IdealGasHeatCapacity" />
+    </Data>
+    <Data property="UnitOfMeasure">
+      <DataReference data="Core/PhysicalQuantities.SpecificHeatCapacityUnit.JoulePerKilomoleKelvin" />
+    </Data>
+    <Data property="Coefficients">
+      <Double>33444.62</Double>
+      <Double>-5.799206</Double>
+      <Double>0.0251681</Double>
+      <Double>-1.43103E-05</Double>
+      <Double>2.76249E-09</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+    </Data>
+    <Components property="MinimumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>-223.14999999999998</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <Components property="MaximumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>726.85</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <References property="Component" objects="#Water" />
+    <References property="Formula" objects="#IKCAPE/POLY" />
+    <References property="DataSource" objects="#ChemSep_DataSource" />
+  </Object>
+  <Object type="ThermoData/PureComponentTemperatureDependentPropertyFunction" id="Water_VaporViscosity">
+    <Data property="EvaluatedProperty">
+      <DataReference data="ThermoData/EvaluatedProperties.VaporViscosity" />
+    </Data>
+    <Data property="UnitOfMeasure">
+      <DataReference data="Core/PhysicalQuantities.DynamicViscosityUnit.PascalSecond" />
+    </Data>
+    <Data property="Coefficients">
+      <Double>7.002327E-08</Double>
+      <Double>0.934576</Double>
+      <Double>195.6338</Double>
+      <Double>-13045.99</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+    </Data>
+    <Components property="MinimumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>0.010000000000047748</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <Components property="MaximumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>800.0000000000001</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <References property="Component" objects="#Water" />
+    <References property="Formula" objects="#IKCAPE/DIP5" />
+    <References property="DataSource" objects="#ChemSep_DataSource" />
+  </Object>
+  <Object type="ThermoData/PureComponentTemperatureDependentPropertyFunction" id="Water_VaporHeatConductivity">
+    <Data property="EvaluatedProperty">
+      <DataReference data="ThermoData/EvaluatedProperties.VaporHeatConductivity" />
+    </Data>
+    <Data property="UnitOfMeasure">
+      <DataReference data="Core/PhysicalQuantities.ThermalConductivityUnit.WattPerMeterKelvin" />
+    </Data>
+    <Data property="Coefficients">
+      <Double>6.5986E-06</Double>
+      <Double>1.3947</Double>
+      <Double>59.478</Double>
+      <Double>-15484</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+    </Data>
+    <Components property="MinimumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>0.010000000000047748</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <Components property="MaximumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>800.0000000000001</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <References property="Component" objects="#Water" />
+    <References property="Formula" objects="#IKCAPE/DIP5" />
+    <References property="DataSource" objects="#ChemSep_DataSource" />
+  </Object>
+  <Object type="ThermoData/PureComponentTemperatureDependentPropertyFunction" id="Water_SurfaceTension">
+    <Data property="EvaluatedProperty">
+      <DataReference data="ThermoData/EvaluatedProperties.SurfaceTension" />
+    </Data>
+    <Data property="UnitOfMeasure">
+      <DataReference data="Core/PhysicalQuantities.SurfaceTensionUnit.NewtonPerMeter" />
+    </Data>
+    <Data property="Coefficients">
+      <Double>0.0602031297</Double>
+      <Double>0.000287152726</Double>
+      <Double>-1.03348374E-06</Double>
+      <Double>6.86693691E-10</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+    </Data>
+    <Components property="MinimumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>-8.049999999999955</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <Components property="MaximumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>373.95000000000005</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <References property="Component" objects="#Water" />
+    <References property="Formula" objects="#IKCAPE/POLY" />
+    <References property="DataSource" objects="#ChemSep_DataSource" />
+  </Object>
+  <Object type="ThermoData/PureComponentTemperatureDependentPropertyFunction" id="Methanol_VaporPressure">
+    <Data property="EvaluatedProperty">
+      <DataReference data="ThermoData/EvaluatedProperties.VaporPressure" />
+    </Data>
+    <Data property="UnitOfMeasure">
+      <DataReference data="Core/PhysicalQuantities.PressureUnit.Pascal" />
+    </Data>
+    <Data property="Coefficients">
+      <Double>73.40342</Double>
+      <Double>-6548.076</Double>
+      <Double>-7.409987</Double>
+      <Double>5.72492E-06</Double>
+      <Double>2</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+    </Data>
+    <Components property="MinimumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>-97.67999999999998</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <Components property="MaximumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>239.49</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <References property="Component" objects="#Methanol" />
+    <References property="Formula" objects="#IKCAPE/KIR1" />
+    <References property="DataSource" objects="#ChemSep_DataSource" />
+  </Object>
+  <Object type="ThermoData/PureComponentTemperatureDependentPropertyFunction" id="Methanol_HeatOfVaporization">
+    <Data property="EvaluatedProperty">
+      <DataReference data="ThermoData/EvaluatedProperties.HeatOfVaporization" />
+    </Data>
+    <Data property="UnitOfMeasure">
+      <DataReference data="Core/PhysicalQuantities.MoleSpecificEnergyUnit.JoulePerKilomole" />
+    </Data>
+    <Data property="Coefficients">
+      <Double>512.64</Double>
+      <Double>58058000</Double>
+      <Double>0.87168</Double>
+      <Double>-0.81501</Double>
+      <Double>0.1695</Double>
+      <Double>0.17846</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+    </Data>
+    <Components property="MinimumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>-97.67999999999998</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <Components property="MaximumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>240</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <References property="Component" objects="#Methanol" />
+    <References property="Formula" objects="#IKCAPE/DIP4" />
+    <References property="DataSource" objects="#ChemSep_DataSource" />
+  </Object>
+  <Object type="ThermoData/PureComponentTemperatureDependentPropertyFunction" id="Methanol_LiquidDensity">
+    <Data property="EvaluatedProperty">
+      <DataReference data="ThermoData/EvaluatedProperties.LiquidDensity" />
+    </Data>
+    <Data property="UnitOfMeasure">
+      <DataReference data="Core/PhysicalQuantities.MolePerLitre" />
+    </Data>
+    <Data property="Coefficients">
+      <Double>1.7918</Double>
+      <Double>0.23929</Double>
+      <Double>512.64</Double>
+      <Double>0.21078</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+    </Data>
+    <Components property="MinimumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>-97.67999999999998</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <Components property="MaximumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>229.95000000000005</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <References property="Component" objects="#Methanol" />
+    <References property="Formula" objects="#IKCAPE/RACK" />
+    <References property="DataSource" objects="#ChemSep_DataSource" />
+  </Object>
+  <Object type="ThermoData/PureComponentTemperatureDependentPropertyFunction" id="Methanol_LiquidHeatCapacity">
+    <Data property="EvaluatedProperty">
+      <DataReference data="ThermoData/EvaluatedProperties.LiquidHeatCapacity" />
+    </Data>
+    <Data property="UnitOfMeasure">
+      <DataReference data="Core/PhysicalQuantities.SpecificHeatCapacityUnit.JoulePerKilomoleKelvin" />
+    </Data>
+    <Data property="Coefficients">
+      <Double>101.75039</Double>
+      <Double>-0.318232231</Double>
+      <Double>0.00077877526</Double>
+      <Double>1.90986723E-07</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+    </Data>
+    <Components property="MinimumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>-97.67999999999998</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <Components property="MaximumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>126.85000000000002</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <References property="Component" objects="#Methanol" />
+    <References property="Formula" objects="#IKCAPE/POLY" />
+    <References property="DataSource" objects="#ChemSep_DataSource" />
+  </Object>
+  <Object type="ThermoData/PureComponentTemperatureDependentPropertyFunction" id="Methanol_LiquidViscosity">
+    <Data property="EvaluatedProperty">
+      <DataReference data="ThermoData/EvaluatedProperties.LiquidViscosity" />
+    </Data>
+    <Data property="UnitOfMeasure">
+      <DataReference data="Core/PhysicalQuantities.DynamicViscosityUnit.PascalSecond" />
+    </Data>
+    <Data property="Coefficients">
+      <Double>-32.996</Double>
+      <Double>1981.4</Double>
+      <Double>3.3666</Double>
+      <Double>-3.9246E-06</Double>
+      <Double>2</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+    </Data>
+    <Components property="MinimumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>-97.67999999999998</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <Components property="MaximumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>64.70000000000005</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <References property="Component" objects="#Methanol" />
+    <References property="Formula" objects="#IKCAPE/KIR1" />
+    <References property="DataSource" objects="#ChemSep_DataSource" />
+  </Object>
+  <Object type="ThermoData/PureComponentTemperatureDependentPropertyFunction" id="Methanol_LiquidHeatConductivity">
+    <Data property="EvaluatedProperty">
+      <DataReference data="ThermoData/EvaluatedProperties.LiquidHeatConductivity" />
+    </Data>
+    <Data property="UnitOfMeasure">
+      <DataReference data="Core/PhysicalQuantities.ThermalConductivityUnit.WattPerMeterKelvin" />
+    </Data>
+    <Data property="Coefficients">
+      <Double>0.300677918</Double>
+      <Double>-0.00044763761</Double>
+      <Double>5.63504879E-07</Double>
+      <Double>-5.80719904E-10</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+    </Data>
+    <Components property="MinimumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>-123.14999999999998</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <Components property="MaximumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>156.85000000000002</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <References property="Component" objects="#Methanol" />
+    <References property="Formula" objects="#IKCAPE/POLY" />
+    <References property="DataSource" objects="#ChemSep_DataSource" />
+  </Object>
+  <Object type="ThermoData/PureComponentTemperatureDependentPropertyFunction" id="Methanol_IdealGasHeatCapacity">
+    <Data property="EvaluatedProperty">
+      <DataReference data="ThermoData/EvaluatedProperties.IdealGasHeatCapacity" />
+    </Data>
+    <Data property="UnitOfMeasure">
+      <DataReference data="Core/PhysicalQuantities.SpecificHeatCapacityUnit.JoulePerKilomoleKelvin" />
+    </Data>
+    <Data property="Coefficients">
+      <Double>39194</Double>
+      <Double>-58.085</Double>
+      <Double>0.35012</Double>
+      <Double>-0.00036941</Double>
+      <Double>1.2763E-07</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+    </Data>
+    <Components property="MinimumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>-223.14999999999998</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <Components property="MaximumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>726.85</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <References property="Component" objects="#Methanol" />
+    <References property="Formula" objects="#IKCAPE/POLY" />
+    <References property="DataSource" objects="#ChemSep_DataSource" />
+  </Object>
+  <Object type="ThermoData/PureComponentTemperatureDependentPropertyFunction" id="Methanol_VaporViscosity">
+    <Data property="EvaluatedProperty">
+      <DataReference data="ThermoData/EvaluatedProperties.VaporViscosity" />
+    </Data>
+    <Data property="UnitOfMeasure">
+      <DataReference data="Core/PhysicalQuantities.DynamicViscosityUnit.PascalSecond" />
+    </Data>
+    <Data property="Coefficients">
+      <Double>3.0654E-07</Double>
+      <Double>0.69658</Double>
+      <Double>204.87</Double>
+      <Double>24.304</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+    </Data>
+    <Components property="MinimumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>-33.14999999999998</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <Components property="MaximumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>726.85</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <References property="Component" objects="#Methanol" />
+    <References property="Formula" objects="#IKCAPE/DIP5" />
+    <References property="DataSource" objects="#ChemSep_DataSource" />
+  </Object>
+  <Object type="ThermoData/PureComponentTemperatureDependentPropertyFunction" id="Methanol_VaporHeatConductivity">
+    <Data property="EvaluatedProperty">
+      <DataReference data="ThermoData/EvaluatedProperties.VaporHeatConductivity" />
+    </Data>
+    <Data property="UnitOfMeasure">
+      <DataReference data="Core/PhysicalQuantities.ThermalConductivityUnit.WattPerMeterKelvin" />
+    </Data>
+    <Data property="Coefficients">
+      <Double>7.8368E-07</Double>
+      <Double>1.7569</Double>
+      <Double>108.12</Double>
+      <Double>-21101</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+    </Data>
+    <Components property="MinimumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>-0.14999999999997726</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <Components property="MaximumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>411.22</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <References property="Component" objects="#Methanol" />
+    <References property="Formula" objects="#IKCAPE/DIP5" />
+    <References property="DataSource" objects="#ChemSep_DataSource" />
+  </Object>
+  <Object type="ThermoData/PureComponentTemperatureDependentPropertyFunction" id="Methanol_SurfaceTension">
+    <Data property="EvaluatedProperty">
+      <DataReference data="ThermoData/EvaluatedProperties.SurfaceTension" />
+    </Data>
+    <Data property="UnitOfMeasure">
+      <DataReference data="Core/PhysicalQuantities.SurfaceTensionUnit.NewtonPerMeter" />
+    </Data>
+    <Data property="Coefficients">
+      <Double>0.0361842879</Double>
+      <Double>-1.62397942E-05</Double>
+      <Double>-9.54390102E-08</Double>
+      <Double>-2.42359657E-11</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+    </Data>
+    <Components property="MinimumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>-0.049999999999954525</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <Components property="MaximumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>230</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <References property="Component" objects="#Methanol" />
+    <References property="Formula" objects="#IKCAPE/POLY" />
+    <References property="DataSource" objects="#ChemSep_DataSource" />
+  </Object>
+  <Object type="ThermoData/PureComponentTemperatureDependentPropertyFunction" id="Acetone_VaporPressure">
+    <Data property="EvaluatedProperty">
+      <DataReference data="ThermoData/EvaluatedProperties.VaporPressure" />
+    </Data>
+    <Data property="UnitOfMeasure">
+      <DataReference data="Core/PhysicalQuantities.PressureUnit.Pascal" />
+    </Data>
+    <Data property="Coefficients">
+      <Double>72.77713</Double>
+      <Double>-5752.936</Double>
+      <Double>-7.680083</Double>
+      <Double>6.83076E-06</Double>
+      <Double>2</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+    </Data>
+    <Components property="MinimumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>-94.69999999999999</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <Components property="MaximumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>235.05</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <References property="Component" objects="#Acetone" />
+    <References property="Formula" objects="#IKCAPE/KIR1" />
+    <References property="DataSource" objects="#ChemSep_DataSource" />
+  </Object>
+  <Object type="ThermoData/PureComponentTemperatureDependentPropertyFunction" id="Acetone_HeatOfVaporization">
+    <Data property="EvaluatedProperty">
+      <DataReference data="ThermoData/EvaluatedProperties.HeatOfVaporization" />
+    </Data>
+    <Data property="UnitOfMeasure">
+      <DataReference data="Core/PhysicalQuantities.MoleSpecificEnergyUnit.JoulePerKilomole" />
+    </Data>
+    <Data property="Coefficients">
+      <Double>508.1</Double>
+      <Double>66943000</Double>
+      <Double>3.4736</Double>
+      <Double>-8.9271</Double>
+      <Double>10.062</Double>
+      <Double>-4.1656</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+    </Data>
+    <Components property="MinimumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>-94.69999999999999</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <Components property="MaximumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>235</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <References property="Component" objects="#Acetone" />
+    <References property="Formula" objects="#IKCAPE/DIP4" />
+    <References property="DataSource" objects="#ChemSep_DataSource" />
+  </Object>
+  <Object type="ThermoData/PureComponentTemperatureDependentPropertyFunction" id="Acetone_LiquidDensity">
+    <Data property="EvaluatedProperty">
+      <DataReference data="ThermoData/EvaluatedProperties.LiquidDensity" />
+    </Data>
+    <Data property="UnitOfMeasure">
+      <DataReference data="Core/PhysicalQuantities.MolePerLitre" />
+    </Data>
+    <Data property="Coefficients">
+      <Double>1.1051</Double>
+      <Double>0.24556</Double>
+      <Double>508.21</Double>
+      <Double>0.27409</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+    </Data>
+    <Components property="MinimumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>-95.14999999999998</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <Components property="MaximumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>235.05</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <References property="Component" objects="#Acetone" />
+    <References property="Formula" objects="#IKCAPE/RACK" />
+    <References property="DataSource" objects="#ChemSep_DataSource" />
+  </Object>
+  <Object type="ThermoData/PureComponentTemperatureDependentPropertyFunction" id="Acetone_LiquidHeatCapacity">
+    <Data property="EvaluatedProperty">
+      <DataReference data="ThermoData/EvaluatedProperties.LiquidHeatCapacity" />
+    </Data>
+    <Data property="UnitOfMeasure">
+      <DataReference data="Core/PhysicalQuantities.SpecificHeatCapacityUnit.JoulePerKilomoleKelvin" />
+    </Data>
+    <Data property="Coefficients">
+      <Double>125.246468</Double>
+      <Double>-0.049131456</Double>
+      <Double>-0.000231320495</Double>
+      <Double>1.36410452E-06</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+    </Data>
+    <Components property="MinimumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>-94.69999999999999</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <Components property="MaximumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>56.29000000000002</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <References property="Component" objects="#Acetone" />
+    <References property="Formula" objects="#IKCAPE/POLY" />
+    <References property="DataSource" objects="#ChemSep_DataSource" />
+  </Object>
+  <Object type="ThermoData/PureComponentTemperatureDependentPropertyFunction" id="Acetone_LiquidViscosity">
+    <Data property="EvaluatedProperty">
+      <DataReference data="ThermoData/EvaluatedProperties.LiquidViscosity" />
+    </Data>
+    <Data property="UnitOfMeasure">
+      <DataReference data="Core/PhysicalQuantities.DynamicViscosityUnit.PascalSecond" />
+    </Data>
+    <Data property="Coefficients">
+      <Double>-14.064</Double>
+      <Double>1000.7</Double>
+      <Double>0.45349</Double>
+      <Double>3.9456E-07</Double>
+      <Double>2</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+    </Data>
+    <Components property="MinimumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>-83.14999999999998</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <Components property="MaximumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>56.29000000000002</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <References property="Component" objects="#Acetone" />
+    <References property="Formula" objects="#IKCAPE/KIR1" />
+    <References property="DataSource" objects="#ChemSep_DataSource" />
+  </Object>
+  <Object type="ThermoData/PureComponentTemperatureDependentPropertyFunction" id="Acetone_LiquidHeatConductivity">
+    <Data property="EvaluatedProperty">
+      <DataReference data="ThermoData/EvaluatedProperties.LiquidHeatConductivity" />
+    </Data>
+    <Data property="UnitOfMeasure">
+      <DataReference data="Core/PhysicalQuantities.ThermalConductivityUnit.WattPerMeterKelvin" />
+    </Data>
+    <Data property="Coefficients">
+      <Double>0.203056465</Double>
+      <Double>0.000567410009</Double>
+      <Double>-3.81110944E-06</Double>
+      <Double>4.78912149E-09</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+    </Data>
+    <Components property="MinimumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>-94.69999999999999</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <Components property="MaximumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>70</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <References property="Component" objects="#Acetone" />
+    <References property="Formula" objects="#IKCAPE/POLY" />
+    <References property="DataSource" objects="#ChemSep_DataSource" />
+  </Object>
+  <Object type="ThermoData/PureComponentTemperatureDependentPropertyFunction" id="Acetone_IdealGasHeatCapacity">
+    <Data property="EvaluatedProperty">
+      <DataReference data="ThermoData/EvaluatedProperties.IdealGasHeatCapacity" />
+    </Data>
+    <Data property="UnitOfMeasure">
+      <DataReference data="Core/PhysicalQuantities.SpecificHeatCapacityUnit.JoulePerKilomoleKelvin" />
+    </Data>
+    <Data property="Coefficients">
+      <Double>42620</Double>
+      <Double>12.563</Double>
+      <Double>0.4765</Double>
+      <Double>-0.00059673</Double>
+      <Double>2.2682E-07</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+    </Data>
+    <Components property="MinimumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>-73.14999999999998</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <Components property="MaximumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>726.85</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <References property="Component" objects="#Acetone" />
+    <References property="Formula" objects="#IKCAPE/POLY" />
+    <References property="DataSource" objects="#ChemSep_DataSource" />
+  </Object>
+  <Object type="ThermoData/PureComponentTemperatureDependentPropertyFunction" id="Acetone_VaporViscosity">
+    <Data property="EvaluatedProperty">
+      <DataReference data="ThermoData/EvaluatedProperties.VaporViscosity" />
+    </Data>
+    <Data property="UnitOfMeasure">
+      <DataReference data="Core/PhysicalQuantities.DynamicViscosityUnit.PascalSecond" />
+    </Data>
+    <Data property="Coefficients">
+      <Double>3.1012E-08</Double>
+      <Double>0.97616</Double>
+      <Double>23.042</Double>
+      <Double>14.834</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+    </Data>
+    <Components property="MinimumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>-94.69999999999999</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <Components property="MaximumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>726.85</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <References property="Component" objects="#Acetone" />
+    <References property="Formula" objects="#IKCAPE/DIP5" />
+    <References property="DataSource" objects="#ChemSep_DataSource" />
+  </Object>
+  <Object type="ThermoData/PureComponentTemperatureDependentPropertyFunction" id="Acetone_VaporHeatConductivity">
+    <Data property="EvaluatedProperty">
+      <DataReference data="ThermoData/EvaluatedProperties.VaporHeatConductivity" />
+    </Data>
+    <Data property="UnitOfMeasure">
+      <DataReference data="Core/PhysicalQuantities.ThermalConductivityUnit.WattPerMeterKelvin" />
+    </Data>
+    <Data property="Coefficients">
+      <Double>-26.882</Double>
+      <Double>0.9036</Double>
+      <Double>-120950000</Double>
+      <Double>-608790000</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+    </Data>
+    <Components property="MinimumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>0</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <Components property="MaximumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>726.85</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <References property="Component" objects="#Acetone" />
+    <References property="Formula" objects="#IKCAPE/DIP5" />
+    <References property="DataSource" objects="#ChemSep_DataSource" />
+  </Object>
+  <Object type="ThermoData/PureComponentTemperatureDependentPropertyFunction" id="Acetone_SurfaceTension">
+    <Data property="EvaluatedProperty">
+      <DataReference data="ThermoData/EvaluatedProperties.SurfaceTension" />
+    </Data>
+    <Data property="UnitOfMeasure">
+      <DataReference data="Core/PhysicalQuantities.SurfaceTensionUnit.NewtonPerMeter" />
+    </Data>
+    <Data property="Coefficients">
+      <Double>0.061001749</Double>
+      <Double>-0.000123400868</Double>
+      <Double>-3.91673807E-08</Double>
+      <Double>8.71984413E-11</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+    </Data>
+    <Components property="MinimumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>-94.69999999999999</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <Components property="MaximumTemperature">
+      <Object type="Core/QualifiedValue">
+        <Data property="Value">
+          <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+            <Data property="Unit">
+              <DataReference data="Core/PhysicalQuantities.TemperatureUnit.DegreeCelsius" />
+            </Data>
+            <Data property="Value">
+              <Double>217.69</Double>
+            </Data>
+          </AggregatedDataValue>
+        </Data>
+      </Object>
+    </Components>
+    <References property="Component" objects="#Acetone" />
+    <References property="Formula" objects="#IKCAPE/POLY" />
+    <References property="DataSource" objects="#ChemSep_DataSource" />
+  </Object>
+  <Object type="ThermoData/BinaryInteractionParameterSet" id="Water_Methanol_NRTL">
+    <Data property="Coefficients">
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>-95.1322967</Double>
+      <Double>398.954308</Double>
+      <Double>0.2999</Double>
+      <Double>0.2999</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+    </Data>
+    <References property="Component1" objects="#Water" />
+    <References property="Component2" objects="#Methanol" />
+    <References property="DataSource" objects="#ChemSep_DataSource" />
+    <References property="Method" objects="#IKCAPE/NRTL" />
+  </Object>
+  <Object type="ThermoData/BinaryInteractionParameterSet" id="Water_Acetone_NRTL">
+    <Data property="Coefficients">
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>666.755586</Double>
+      <Double>409.69379</Double>
+      <Double>0.5663</Double>
+      <Double>0.5663</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+    </Data>
+    <References property="Component1" objects="#Water" />
+    <References property="Component2" objects="#Acetone" />
+    <References property="DataSource" objects="#ChemSep_DataSource" />
+    <References property="Method" objects="#IKCAPE/NRTL" />
+  </Object>
+  <Object type="ThermoData/BinaryInteractionParameterSet" id="Methanol_Acetone_NRTL">
+    <Data property="Coefficients">
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>92.7265499</Double>
+      <Double>114.008655</Double>
+      <Double>0.3009</Double>
+      <Double>0.3009</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+      <Double>0</Double>
+    </Data>
+    <References property="Component1" objects="#Methanol" />
+    <References property="Component2" objects="#Acetone" />
+    <References property="DataSource" objects="#ChemSep_DataSource" />
+    <References property="Method" objects="#IKCAPE/NRTL" />
+  </Object>
+</Model>

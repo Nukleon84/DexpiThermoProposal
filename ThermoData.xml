@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Model name="ThermoData" uri="http://example.org/dexpi/ThermoData">
+  <Import prefix="Core" source="https://data.dexpi.org/meta/2.0.0/Core" />
+  <Import prefix="Process" source="https://data.dexpi.org/meta/2.0.0/Process" />
+  <ConcreteClass name="DataSource">
+    <DataProperty name="Authors" type="Builtin/String" lower="0" upper="*" isOrdered="true" isUnique="false" />
+    <DataProperty name="Description" type="Builtin/String" lower="0" upper="1" isOrdered="true" isUnique="false" />
+    <DataProperty name="Title" type="Builtin/String" lower="0" upper="1" isOrdered="true" isUnique="false" />
+    <DataProperty name="Journal" type="Builtin/String" lower="0" upper="1" isOrdered="true" isUnique="false" />
+    <DataProperty name="Volume" type="Builtin/String" lower="0" upper="1" isOrdered="true" isUnique="false" />
+    <DataProperty name="Issue" type="Builtin/String" lower="0" upper="1" isOrdered="true" isUnique="false" />
+    <DataProperty name="Page" type="Builtin/String" lower="0" upper="1" isOrdered="true" isUnique="false" />
+    <DataProperty name="Year" type="Builtin/String" lower="0" upper="1" isOrdered="true" isUnique="false" />
+    <DataProperty name="License" type="Builtin/String" lower="0" upper="1" isOrdered="true" isUnique="false" />
+    <DataProperty name="SourceURI" type="Builtin/String" lower="0" upper="1" isOrdered="true" isUnique="false" />
+  </ConcreteClass>
+  <ConcreteClass name="PureComponentTempDepCorrelation">
+    <DataProperty name="Coefficients" type="Builtin/String" lower="0" upper="*" isOrdered="true" isUnique="false" />
+    <DataProperty name="Expression" type="Builtin/String" lower="0" upper="1" isOrdered="true" isUnique="false" />
+    <DataProperty name="SourceURI" type="Builtin/String" lower="0" upper="1" isOrdered="true" isUnique="false" />
+  </ConcreteClass>
+  <ConcreteClass name="PureComponentConstantProperty">
+    <ReferenceProperty name="Component" type="Process/PureMaterialComponent" lower="1" upper="1" isOrdered="false" isUnique="false" oppositeLower="0" oppositeUpper="*" />
+    <DataProperty name="Property" type="ThermoData/ConstantProperties" lower="1" upper="1" isOrdered="false" isUnique="false" />
+    <DataProperty name="UnitOfMeasure" type="Core/PhysicalQuantities.PhysicalQuantityUnit" lower="1" upper="1" isOrdered="false" isUnique="false" />
+    <CompositionProperty name="MinimumTemperature" type="Core/QualifiedValue" lower="0" upper="1" isOrdered="false" />
+    <CompositionProperty name="MaximumTemperature" type="Core/QualifiedValue" lower="0" upper="1" isOrdered="false" />
+    <DataProperty name="Value" type="Builtin/Double" lower="0" upper="1" isOrdered="true" isUnique="false" />
+    <ReferenceProperty name="Source" type="ThermoData/DataSource" lower="0" upper="1" isOrdered="false" isUnique="false" oppositeLower="0" oppositeUpper="*" />
+  </ConcreteClass>
+  <ConcreteClass name="PureComponentTemperatureDependentPropertyFunction">
+    <ReferenceProperty name="Component" type="Process/PureMaterialComponent" lower="1" upper="1" isOrdered="false" isUnique="false" oppositeLower="0" oppositeUpper="*" />
+    <ReferenceProperty name="Formula" type="ThermoData/PureComponentTempDepCorrelation" lower="1" upper="1" isOrdered="false" isUnique="false" oppositeLower="0" oppositeUpper="*" />
+    <DataProperty name="EvaluatedProperty" type="ThermoData/EvaluatedProperties" lower="1" upper="1" isOrdered="false" isUnique="false" />
+    <DataProperty name="UnitOfMeasure" type="Core/PhysicalQuantities.PhysicalQuantityUnit" lower="1" upper="1" isOrdered="false" isUnique="false" />
+    <CompositionProperty name="MinimumTemperature" type="Core/QualifiedValue" lower="0" upper="1" isOrdered="false" />
+    <CompositionProperty name="MaximumTemperature" type="Core/QualifiedValue" lower="0" upper="1" isOrdered="false" />
+    <DataProperty name="Coefficients" type="Builtin/Double" lower="0" upper="*" isOrdered="true" isUnique="false" />
+    <ReferenceProperty name="Source" type="ThermoData/DataSource" lower="0" upper="1" isOrdered="false" isUnique="false" oppositeLower="0" oppositeUpper="*" />
+  </ConcreteClass>
+  <ConcreteClass name="BinaryInteractionMethod">
+    <DataProperty name="Coefficients" type="Builtin/Double" lower="0" upper="*" isOrdered="true" isUnique="false" />
+    <DataProperty name="Expression" type="Builtin/String" lower="0" upper="1" isOrdered="true" isUnique="false" />
+    <DataProperty name="SourceURI" type="Builtin/String" lower="0" upper="1" isOrdered="true" isUnique="false" />
+  </ConcreteClass>
+  <ConcreteClass name="BinaryInteractionParameterSet">
+    <ReferenceProperty name="Component1" type="Process/PureMaterialComponent" lower="1" upper="1" isOrdered="false" isUnique="false" oppositeLower="0" oppositeUpper="*" />
+    <ReferenceProperty name="Component2" type="Process/PureMaterialComponent" lower="1" upper="1" isOrdered="false" isUnique="false" oppositeLower="0" oppositeUpper="*" />
+    <ReferenceProperty name="Method" type="ThermoData/BinaryInteractionMethod" lower="1" upper="1" isOrdered="false" isUnique="false" oppositeLower="0" oppositeUpper="*" />
+    <CompositionProperty name="MinimumTemperature" type="Core/QualifiedValue" lower="0" upper="1" isOrdered="false" />
+    <CompositionProperty name="MaximumTemperature" type="Core/QualifiedValue" lower="0" upper="1" isOrdered="false" />
+    <DataProperty name="Coefficients" type="Builtin/Double" lower="0" upper="*" isOrdered="true" isUnique="false" />
+    <ReferenceProperty name="Source" type="ThermoData/DataSource" lower="0" upper="1" isOrdered="false" isUnique="false" oppositeLower="0" oppositeUpper="*" />
+  </ConcreteClass>
+  <ClassExtension name="MaterialComponentExtension" baseType="Process/PureMaterialComponent">
+    <DataProperty name="CasNumber" type="Builtin/String" lower="0" upper="1" isOrdered="true" isUnique="false" />
+  </ClassExtension>
+  <Enumeration name="ConstantProperties">
+    <EnumerationLiteral name="MolarWeight" />
+    <EnumerationLiteral name="CriticalTemperature" />
+    <EnumerationLiteral name="CriticalPressure" />
+    <EnumerationLiteral name="AcentricFactor" />
+  </Enumeration>
+  <Enumeration name="EvaluatedProperties">
+    <EnumerationLiteral name="VaporPressure" />
+    <EnumerationLiteral name="IdealGasHeatCapacity" />
+    <EnumerationLiteral name="LiquidHeatCapacity" />
+    <EnumerationLiteral name="HeatOfVaporization" />
+    <EnumerationLiteral name="LiquidDensity" />
+    <EnumerationLiteral name="SurfaceTension" />
+    <EnumerationLiteral name="LiquidHeatConductivity" />
+    <EnumerationLiteral name="VaporHeatConductivity" />
+    <EnumerationLiteral name="LiquidViscosity" />
+    <EnumerationLiteral name="VaporViscosity" />
+  </Enumeration>
+  <Enumeration name="MolarWeightUnit" superTypes="Core/PhysicalQuantities.PhysicalQuantityUnit">
+    <EnumerationLiteral name="GramPerMole" />
+    <EnumerationLiteral name="KilogramPerMole" />
+    <EnumerationLiteral name="KilogramPerKmol" />
+  </Enumeration>
+</Model>
