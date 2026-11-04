@@ -22,10 +22,8 @@
   <ConcreteClass name="PureComponentConstantProperty">
     <ReferenceProperty name="Component" type="Process/PureMaterialComponent" lower="1" upper="1" isOrdered="false" isUnique="false" oppositeLower="0" oppositeUpper="*" />
     <DataProperty name="Property" type="ThermoData/ConstantProperties" lower="1" upper="1" isOrdered="false" isUnique="false" />
-    <DataProperty name="UnitOfMeasure" type="Core/PhysicalQuantities.PhysicalQuantityUnit" lower="1" upper="1" isOrdered="false" isUnique="false" />
-    <CompositionProperty name="MinimumTemperature" type="Core/QualifiedValue" lower="0" upper="1" isOrdered="false" />
-    <CompositionProperty name="MaximumTemperature" type="Core/QualifiedValue" lower="0" upper="1" isOrdered="false" />
-    <DataProperty name="Value" type="Builtin/Double" lower="0" upper="1" isOrdered="true" isUnique="false" />
+    <DataProperty name="UnitOfMeasure" type="Core/PhysicalQuantities.PhysicalQuantityUnit" lower="0" upper="1" isOrdered="false" isUnique="false" />
+    <DataProperty name="Value" type="Builtin/Double" lower="1" upper="1" isOrdered="true" isUnique="false" />
     <ReferenceProperty name="Source" type="ThermoData/DataSource" lower="0" upper="1" isOrdered="false" isUnique="false" oppositeLower="0" oppositeUpper="*" />
   </ConcreteClass>
   <ConcreteClass name="PureComponentTemperatureDependentPropertyFunction">
